@@ -1,0 +1,310 @@
+
+/* CONFIGURAÇÃO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffaf5;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #e87945;
+}
+
+/* CABEÇALHO */
+header {
+    background-color: #ffffff;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO */
+header a {
+    font-weight: bold;
+    color: #276749;
+}
+
+header a:hover {
+    color: #e87945;
+}
+
+/* MENU */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    width: 100%;
+}
+
+section {
+    padding: 70px 8%;
+    scroll-margin-top: 90px;
+}
+
+/* TÍTULOS */
+h1, h2, h3 {
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 46px;
+    color: #245b45;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    color: #245b45;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 21px;
+    color: #276749;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* BOTÕES */
+button,
+.btn,
+section a[href^="#"] {
+    display: inline-block;
+    background-color: #e87945;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin: 8px 5px 8px 0;
+}
+
+button:hover,
+.btn:hover,
+section a[href^="#"]:hover {
+    background-color: #c75b2c;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* PRIMEIRA SEÇÃO / INÍCIO */
+#inicio {
+    background: linear-gradient(135deg, #e7f4e8, #fff0df);
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#inicio p {
+    max-width: 650px;
+    font-size: 18px;
+}
+
+#inicio h1 {
+    max-width: 750px;
+}
+
+/* SERVIÇOS E PRODUTOS */
+#servicos,
+#produtos {
+    text-align: center;
+}
+
+#servicos > *,
+#produtos > * {
+    max-width: 1100px;
+}
+
+/* CARTÕES */
+.card,
+article,
+#servicos .servico,
+#produtos .produto {
+    background-color: #ffffff;
+    border: 1px solid #f0e5da;
+    border-radius: 18px;
+    padding: 28px;
+    margin: 15px 0;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.card:hover,
+article:hover,
+#servicos .servico:hover,
+#produtos .produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ÍCONES DOS CARTÕES */
+#servicos h3,
+#produtos h3 {
+    margin-top: 10px;
+}
+
+/* HORÁRIOS */
+#horarios {
+    background-color: #eaf4ec;
+}
+
+#horarios p {
+    background-color: white;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 12px 0;
+    max-width: 500px;
+    border-left: 5px solid #4b956b;
+}
+
+#horarios strong {
+    color: #245b45;
+}
+
+/* LOCALIZAÇÃO */
+#localizacao {
+    background-color: #fff0df;
+}
+
+#localizacao p {
+    font-size: 17px;
+}
+
+/* CONTATO */
+#contato {
+    text-align: center;
+    background-color: #e7f4e8;
+    padding: 80px 8%;
+}
+
+#contato h2 {
+    margin-bottom: 20px;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #245b45;
+    color: white;
+    text-align: center;
+    padding: 25px 8%;
+}
+
+footer a {
+    color: #ffe0bd;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 45px 5%;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    #inicio {
+        min-height: 350px;
+    }
+
+    #inicio p {
+        font-size: 16px;
+    }
+
+    .card,
+    article,
+    #servicos .servico,
+    #produtos .produto {
+        padding: 20px;
+    }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    button,
+    .btn,
+    section a[href^="#"] {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
